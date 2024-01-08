@@ -381,6 +381,12 @@ ul.info-list li .inf {
   border-radius: 1rem;
   background-color: #2c2d30;
 }
+
+.fa-icon {
+ font-size: 25px;
+}
+
+
 .timeline {
     position: relative;
 }
@@ -1075,6 +1081,12 @@ hr.divider:after {
 .morphext > .animated {
     display: inline-block;
 }
+
+i.svg-icon {
+  color:#F56C6D;
+  
+}
+
 svg.svg-icon{
   fill:#F56C6D;
   stroke:#F56C6D;

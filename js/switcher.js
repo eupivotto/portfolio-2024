@@ -9,6 +9,22 @@ function setActiveStyleSheet(title) {
 
             if (a.getAttribute("title") == title) a.disabled = false;
 
+            if (title === 'clr-1') {
+                
+                document.querySelectorAll('.fa-icon').forEach(function(icon) {
+                    icon.classList.add('clr-1');
+                    icon.classList.remove('clr-2');
+                    
+                });
+            } else if (title === 'clr-2') {
+               
+                document.querySelectorAll('.fa-icon').forEach(function(icon) {
+                    icon.classList.add('clr-2');
+                    icon.classList.remove('clr-1');
+                    
+                });
+            }
+
 
         }
 
