@@ -208,23 +208,25 @@
             return false;
         }
 
-        var data_string = $('.contact-form').serialize();
-
-
-        $.ajax({
-            type: "POST",
-            url: $('.contact-form').attr('action'),
-            data: data_string,
-
-            success: function(message) {
-                if (message == 'SENDING') {
-                    $('#success').fadeIn('slow');
-                } else {
-                    $('#error').fadeIn('slow');
+        if (!error) {
+            var dataString = $('.contact-form').serialize();
+    
+            $.ajax({
+                type: "POST",
+                url: "send2.php", // Substitua pela URL do seu backend PHP
+                data: dataString,
+                success: function(message) {
+                    if (message === 'SENDING') {
+                        $('#success').fadeIn('slow');
+                    } else {
+                        $('#error').fadeIn('slow');
+                    }
+                },
+                error: function() {
+                    $('#error').fadeIn('slow'); // Em caso de erro na requisição AJAX
                 }
-            }
-
-        });
+            });
+        }
 
         return false;
     });
